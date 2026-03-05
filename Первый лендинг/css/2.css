@@ -1,0 +1,91 @@
+.white {
+    color: white;
+}
+
+.btn7 {
+    border-color: white;
+    color: white;
+    background-color: rgba(0,0, 0, 0);
+    border-radius: 8px;
+    border-style: solid;
+    font-size: 20px;
+    width: 99px;
+    height: 52px;
+}
+
+.header-image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.new-header {
+    height: 760px;
+
+}
+
+.new-header-hero {
+    text-align: center;
+}
+
+.new-header-hero h1 {
+    margin-bottom: 16px;
+    margin-top: 130px;
+    font-size: 64px;
+    font-weight: 800;
+}
+.new-header-hero p {
+    margin-bottom: 30px;
+}
+
+
+.sec7 {
+    margin-top: 120px;
+    margin-bottom: 150px;
+}
+.sec7 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+.sec7 p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.sec7 article {
+    width: 516px;
+}
+
+.sec8 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 180px;
+}
+
+.sec8 h4 {
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
+.sec8 p {
+    margin-bottom: 16px;
+}
+
+.sec9 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.sec9 div {
+    width: 515px;
+}
+
+.sec9 article {
+    height: 400px;
+}

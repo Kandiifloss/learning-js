@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter";
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    
+}
+a:visited {
+    color: inherit;
+}
+
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+
+
+.hero--inner {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    width: 844px;
+}
+
+.hero {
+    margin-bottom: 150px;
+}
+
+.header {
+    align-items: center;
+
+}
+
+.btn {
+    border-radius: 8px;
+    border-style: none;
+    background-color: black;
+    color: white;
+    width: 141px;
+    height: 76px;
+    font-size: 24px;
+
+}
+
+.btn2 {
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 99px;
+    height: 52px;
+    
+}
+
+.btn3 {
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    width: 125px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.btn4 {
+    border-radius: 8px;
+    border-style: none;
+    background-color: #E6E6E6;
+    width: 255px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.btn5 {
+    border-radius: 8px;
+    border-style: none;
+    background-color: #000000;
+    color: white;
+    width: 141px;
+    height: 76px;
+    font-size: 24px;
+}
+
+.btn6 {
+    border-radius: 8px;
+    border-style: none;
+    background-color: #E6E6E6;
+    width: 271px;
+    height: 76px;
+    font-size: 24px;
+}
+
+article h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header {
+    padding: 50px 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.grey {
+    color:  #828282;
+}
+
+
+.small {
+    font-size: 16px;
+}
+
+
+header nav {
+    float: right;   
+    width: 50%;
+}
+
+header nav ul {
+    display: flex;
+
+}
+
+
+
+.sec-heading {
+    font-size: 48;
+    font-weight: 700;
+    margin-bottom: 60px;
+    width: 624px;
+
+}
+
+div article {
+    width: 90%;
+}
+
+.sec1 {
+    display: flex;
+    justify-content: space-between;    
+    margin-bottom: 180px;
+}
+
+.sec1 div {
+    width: 405px;
+}
+
+.sec1 div article {
+    margin-top: 24px;
+}
+
+.sec2 {
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.sec2 div article {
+    margin-bottom: 48px;
+    font-size: 24px;
+    width: 516px;
+}
+
+.sec3 {
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.sec3 div article {
+    margin-top: 32px;
+}
+
+.sec3 div article h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 24px;
+
+}
+
+.sec4 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 180px;
+}
+
+.sec4 > div {
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #e7e7e7;
+}
+
+.sec4 div article {
+    margin: 32px;
+}
+
+.sec4 div article footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    width: 150px;
+    height: 50px;
+}
+
+.sec4 .grey {
+    margin-top: 10px;
+}
+
+.sec5 {
+    background-color: #e9e2e2;
+    height: 236px;
+    
+}
+
+.sec5 > div {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    top:35%   
+}
+
+.sec6 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    
+    border-top: 2px solid #b2afaf;
+    
+}
+.nav2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin-top: 50px;
+    
+}
+
+.nav2 p {
+    margin-bottom: 24px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 184px;
+    margin-top: 105px;
+}
