@@ -1,0 +1,138 @@
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+
+
+body{
+    text-align: center;
+}
+
+.center {
+    position: absolute;
+    width: 25px !important;
+    height: 25px !important ;
+    margin: 36px !important;
+}
+
+.dice1 {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 5px;
+
+    
+}
+
+.dice1 div {
+    background-color: red;
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.dice2 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.dice2 div {
+    
+    background-color: rgb(0, 0, 0);
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.dice3 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.dice3 div {
+    
+    background-color: rgb(0, 0, 0);
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.dice4 {
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.dice4 div {
+    
+    background-color: rgb(0, 0, 0);
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin: 12px;
+
+}
+
+.dice5 {
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+
+
+.dice5 div {
+    
+    background-color: rgb(0, 0, 0);
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin: 12px;
+
+}
+
+
+.dice6 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.dice6 div {
+    
+    background-color: rgb(0, 0, 0);
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin: 4px 12px;
+
+}
+
+
