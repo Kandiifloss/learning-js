@@ -1,23 +1,64 @@
-#myBox {
+
+
+#display {
+    width: 400px;
+    height: 400px;
+    border: 2px solid;
+    
+}
+
+.rows {
     display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
-    background-color: rgb(190, 190, 190);
-    border:2px solid;
-    border-radius: 5px;
-    padding: 50px 10px;
-    text-align: center;
+}
+
+.white {
+    display: flex;
+    justify-content: center;
+    background-color: white !important;
     align-items: center;
 }
 
-
- 
-#myInput {
-    width: 20%;
-    align-self: center;
+.rows>div {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+   
 }
 
-#submitBtn {
-    width: 30%;
+.shashka  {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgb(241, 125, 29) !important;
+    border-radius: 50px;
+    transform: scale(0.8);
+    border:3px solid
 }
+
+.shashka:hover {
+    background-color: rgb(112, 61, 61) !important;
+
+}
+
+
+.hidden {
+    background-color: rgba(235, 235, 235, 0) !important;
+    border: none;
+}
+
+.enemy {
+    background-color: rgb(248, 13, 13) !important;
+}
+
+.enemy:hover {
+    background-color: rgb(250, 115, 115) !important;
+}
+
+.active {
+    background-color: rgb(92, 92, 92) !important;
+}
+
+.hover {
+    background-color: antiquewhite;
+}
+
+
