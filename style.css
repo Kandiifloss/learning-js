@@ -1,0 +1,28 @@
+#generatorBtn {
+    display: block;
+    padding: 20px;
+    place-self: center;
+}
+
+#display {
+    text-align: center;
+    font-size: 3em;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+input {
+    width: 100px;
+}
+
+
+
+h1 {
+    display: block;
+    text-align: center;
+}
