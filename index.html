@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
+    <title>Темпиратура</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="display">0</h1>
-    <div>
-        <button id="decrese">Уменьшить</button>
-        <button id="reset">Обнулить</button>
-        <button id="increse">Увеличить</button>    
+    <div id="myBox">
+        <h2>Конвертор темпиратуры:</h2> 
+        <input type="text" id="myInput">
+
+        <label for="first" class="choiceClass">
+            <input type="radio" name="choice" id="first"> Цельсия → Фаренгейта
+        </label>
+        <label for="second" class="choiceClass">
+            <input type="radio" name="choice" id="second"> Фаренгейта → Цельсия
+        </label>
+        
+        
+        <button id="submitBtn">Submit</button>
+        <h2 id="result"></h2>
     </div>
+
+
+
+
+
     <script src="index.js"></script>
 </body>
 </html>

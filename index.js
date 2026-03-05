@@ -1,25 +1,19 @@
 
+const submit = document.getElementById("submitBtn");
+const first = document.getElementById("first");
+const second = document.getElementById("second");
 
-
-let count = document.getElementById("display").innerText;
-
-count = Number(count)
-
-
-
-
-document.getElementById("increse").onclick = function (){
-    count++;
-    document.getElementById("display").textContent = count
-}
-
-
-document.getElementById("decrese").onclick =  function (){
-    count--;
-    document.getElementById("display").textContent = count
-}
-
-document.getElementById("reset").onclick = function (){
-    count = 0;
-    document.getElementById("display").textContent = count
+submit.onclick = function(){
+    let input = document.getElementById("myInput").value;
+    
+    if (input){
+        if (first.checked){
+            document.getElementById("result").textContent = (input * 1.8 + 32).toFixed(2) + "F";
+        }
+        if (second.checked){
+            document.getElementById("result").textContent = ((input - 32)/1.8).toFixed(2) + "C";
+        }
+    
+    }
+    
 }
