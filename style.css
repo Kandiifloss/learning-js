@@ -1,28 +1,29 @@
-#generatorBtn {
-    display: block;
-    padding: 20px;
-    place-self: center;
+button {
+    background-color: hsl(212, 83%, 60%);
+    border: none;
+    color: white;
+    padding:  20px;
+    cursor: pointer;
 }
 
-#display {
+button:hover {
+    background-color: hsl(212, 83%, 50%);
+}
+
+button:active {
+    background-color: hsl(212, 83%, 40%);
+}
+
+
+body {
     text-align: center;
-    font-size: 3em;
 }
-
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h1 {
+    font-size: 60px;
     
 }
 
-input {
-    width: 100px;
-}
-
-
-
-h1 {
-    display: block;
+div {
     text-align: center;
+    padding-top: 0px;
 }

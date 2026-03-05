@@ -1,14 +1,25 @@
-const button = document.getElementById("generatorBtn");
-const display = document.getElementById("display");
-let min = document.getElementById("min");
-let max = document.getElementById("max");
+
+
+
+let count = document.getElementById("display").innerText;
+
+count = Number(count)
 
 
 
 
-
-button.onclick = function(){
-    display.textContent = Math.floor(Math.random() * (max.value - min.value+1)) - min.value + 2 ;
-
+document.getElementById("increse").onclick = function (){
+    count++;
+    document.getElementById("display").textContent = count
 }
 
+
+document.getElementById("decrese").onclick =  function (){
+    count--;
+    document.getElementById("display").textContent = count
+}
+
+document.getElementById("reset").onclick = function (){
+    count = 0;
+    document.getElementById("display").textContent = count
+}
