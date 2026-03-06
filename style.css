@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+}
+
+.container{
+    margin: auto;
+    width: 25%;
+}
+
+.inputArea {
+    display: flex;
+    gap: 5px;
+}
+
+#input {
+    width: 20%;
+}
+
+.choice{
+    padding: 10px 0;
+}
+
+.checkBoxes {
+    padding: auto;
+    width: auto ;
+    text-align: left;
+    align-items: center;
+}
