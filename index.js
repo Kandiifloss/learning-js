@@ -37,6 +37,22 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
              return symbol();
     }
 
+    function symbolChoise(){
+        if (isLower && isUpper){
+                display.textContent += randRegister();
+                return;
+            }
+            else if (isUpper){
+                display.textContent += symbol().toUpperCase();
+                return;
+            }
+            else {
+                display.textContent += symbol()
+                return;
+            }
+    }
+
+
     if (!isNumber && !isSymbol){
         display.textContent = "Выберите хоть что-то . . . ";
         return;
@@ -64,22 +80,7 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
         
         //только символы
         if (isSymbol && !isNumber){
-            if (isLower && isUpper){
-                display.textContent += randRegister();
-                continue;
-            }
-            else if (isUpper){
-                display.textContent += symbol().toUpperCase();
-                continue;
-            }
-            else {
-                display.textContent += symbol()
-                continue;
-            }
-
-            
-            
-            
+            symbolChoise(); 
         }
 
         //Символы и числа
@@ -89,7 +90,7 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
             
         }
         else 
-            display.textContent += randRegister();
+            symbolChoise();
     
     }
 }
