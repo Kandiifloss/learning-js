@@ -1,28 +1,31 @@
-body {
-    text-align: center;
+* {
+    margin: 0 0;
 }
 
-.container{
-    margin: auto;
-    width: 25%;
+img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
 }
 
-.inputArea {
+.main{
+    padding: 10%;
+}
+
+#display {
     display: flex;
-    gap: 5px;
-}
-
-#input {
-    width: 20%;
-}
-
-.choice{
-    padding: 10px 0;
-}
-
-.checkBoxes {
-    padding: auto;
-    width: auto ;
-    text-align: left;
+    justify-content: center;
     align-items: center;
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;    
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 6em;
+    color: white
 }

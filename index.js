@@ -1,80 +1,12 @@
-const length = document.getElementById("input");
-const display = document.getElementById("display");
-const generate = document.getElementById("generate");
-const includeNumbers = document.getElementById("includeNumbers");
-const includeSimbols = document.getElementById("includeSimbols");
-const includeUppercase = document.getElementById("includeUppercase");
-const includeLowercase = document.getElementById("includeLowercase");
-const numberRate = document.getElementById("numberRate");
-const registerRate = document.getElementById("registerRate");
+const timeDisplay = document.getElementById("time");
 
-function generator(length, isNumber, isSymbol, isUpper, isLower){
-    const latters = "qwertyuiopasdfghjklzxcvbnm";
-    const upperLatters = latters.toUpperCase();
-    const numbers = "0123456789";
-    let allowedChars = "";
-    let password = "";
-    let temp = ""
-
-    function pickaAChar(){
-        let random = Math.round((Math.random() * Number(allowedChars.length - 1 ))) ;
-        password += allowedChars[random];
-    }
-    
-    allowedChars += isNumber ? numbers: "";
-
-    allowedChars += isSymbol && isLower ? latters: "";
-
-    allowedChars += isSymbol && isUpper ? upperLatters: "";
-    
-    if (isSymbol)
-        if (!isLower && !isUpper){
-            return "Не выбран регистр символов"
-        }
-
-    if (allowedChars == "")
-        return "Выбери хоть что-то ..."
-        
-    temp = allowedChars;
-    
-    for (let i = 0; i < length.value; i++){
-        let a = Math.round((Math.random() * 100)-1)
-        allowedChars = temp;
-
-        //если есть среди чего выбирать, тогда проверяем шанс выпадения
-        if (isSymbol && isNumber){
-            if (numberRate.value <= a){
-                allowedChars = allowedChars.replace(numbers, "");
-            }
-            else {
-                allowedChars = allowedChars.replace(latters, "").replace(upperLatters, "");
-            }
-        }
-
-        //если можно выбрать регистр, убираем лишние буквы
-        a = Math.round((Math.random() * 100)-1)
-        if (isUpper && isLower){
-            if (registerRate.value >= a){
-                allowedChars = allowedChars.replace(latters, "")
-            }
-            else{
-                allowedChars = allowedChars.replace(upperLatters, "")
-            }
-        }
-      
-        //выбираем символ из оставшихся 
-        pickaAChar();
-    }
-    
-    return password;
+function update(){
+    let = currentTime = new Date();
+    let ampm = currentTime.getHours() / 12 > 1 ? "PM": "AM" ;
+    timeDisplay.textContent = `${currentTime.getHours().toString().padStart(2, 0)%12}:`+
+                              `${currentTime.getMinutes().toString().padStart(2, 0)}:`+
+                              `${currentTime.getSeconds().toString().padStart(2, 0)}  `+
+                              `${ampm}`;
 }
-generate.onclick = function(){
-
-    display.textContent = ""
-
-    display.textContent = generator(length,
-                                    includeNumbers.checked,
-                                    includeSimbols.checked,
-                                    includeUppercase.checked,
-                                    includeLowercase.checked);
-}
+update();
+setInterval(update, 1000);
