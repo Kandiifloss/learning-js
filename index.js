@@ -23,13 +23,10 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
     
     allowedChars += isNumber ? numbers: "";
 
-    if (isSymbol && isLower) {
-        allowedChars += latters;
-    }
+    allowedChars += isSymbol && isLower ? latters: "";
 
-    if (isSymbol && isUpper) {
-        allowedChars += upperLatters;
-    }
+    allowedChars += isSymbol && isUpper ? upperLatters: "";
+    
     if (isSymbol)
         if (!isLower && !isUpper){
             return "Не выбран регистр символов"
@@ -57,7 +54,7 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
         //если можно выбрать регистр, убираем лишние буквы
         a = Math.round((Math.random() * 100)-1)
         if (isUpper && isLower){
-            if (registerRate.value <= a){
+            if (registerRate.value >= a){
                 allowedChars = allowedChars.replace(latters, "")
             }
             else{
