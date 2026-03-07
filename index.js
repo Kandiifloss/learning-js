@@ -1,4 +1,4 @@
-//я долго не мог разобраться с оптимальн
+
 
 const length = document.getElementById("input");
 const display = document.getElementById("display");
@@ -14,85 +14,79 @@ const registerRate = document.getElementById("registerRate");
 
 
 function generator(length, isNumber, isSymbol, isUpper, isLower){
-    //случайный символ
-    function symbol(){
-        let randChar = Math.round((Math.random() * 25)) + 97;
-        return String.fromCharCode(randChar);
-    }
-
-    //случайный номер
-    function number(){
-        let randChar = String(Math.round((Math.random() * 9)));
-        return randChar;
-    }
+    const latters = "qwertyuiopasdfghjklzxcvbnm";
+    const upperLatters = latters.toUpperCase();
+    const numbers = "0123456789";
+    let allowedChars = "";
+    let password = "";
+    let temp = ""
 
 
-    //случайный символ с случайным регистром
-    function randRegister(){
-        let rand = Math.round((Math.random() * 100));
-        if (rand < Number(registerRate.value)){
-            return symbol().toUpperCase();
-        }
-        else
-             return symbol();
-    }
-
-    function symbolChoise(){
-        if (isLower && isUpper){
-                display.textContent += randRegister();
-                return;
-            }
-            else if (isUpper){
-                display.textContent += symbol().toUpperCase();
-                return;
-            }
-            else {
-                display.textContent += symbol()
-                return;
-            }
-    }
 
 
-    if (!isNumber && !isSymbol){
-        display.textContent = "Выберите хоть что-то . . . ";
-        return;
-    }
 
-    if (isSymbol){
-        if(!isLower && !isUpper){
-            display.textContent = "Выберите регистр букв";
-            return;
-        }
-    }
-
-        
+    allowedChars += isNumber ? numbers: "";
     
+
+    if (isSymbol && isLower) {
+        allowedChars += latters;
+    }
+
+    if (isSymbol && isUpper) {
+        allowedChars += upperLatters;
+    }
+
+    if (isSymbol)
+        if (!isLower && !isUpper){
+            return "Не выбран регистр символов"
+        }
+    temp = allowedChars;
+
+    if (allowedChars == "")
+        return "Выбери хоть что-то ..."
+
+    function pickaAChar(){
+        let random = Math.round((Math.random() * Number(allowedChars.length - 1 ))) ;
+        password += allowedChars[random];
+    }
+    
+
     
     for (let i = 0; i < length.value; i++){
-        
-        let charChoise = Math.round((Math.random() * 100));
-        
-        //только числа
-        if (isNumber && !isSymbol){
-            display.textContent += number();
-            continue;
-        }
-        
-        //только символы
-        if (isSymbol && !isNumber){
-            symbolChoise(); 
+        let a = Math.round((Math.random() * 100)-1)
+        allowedChars = temp;
+
+        //если есть среди чего выбирать, тогда проверяем шанс выпадения
+        if (isSymbol && isNumber){
+            if (numberRate.value <= a){
+                allowedChars = allowedChars.replace(numbers, "");
+            }
+            else {
+                allowedChars = allowedChars.replace(latters, "").replace(upperLatters, "");
+            }
         }
 
-        //Символы и числа
-        if (isNumber && (charChoise <= Number(numberRate.value))){
-            display.textContent += number();
-            continue;
-            
+        //если можно выбрать регистр, убираем лишние буквы
+        a = Math.round((Math.random() * 100)-1)
+        if (isUpper && isLower){
+            if (registerRate.value <= a){
+                allowedChars = allowedChars.replace(latters, "")
+            }
+            else{
+                allowedChars = allowedChars.replace(upperLatters, "")
+            }
         }
-        else 
-            symbolChoise();
-    
+
+        
+        //выбираем символ из оставшихся 
+        pickaAChar();
     }
+    
+
+
+
+
+    return password;
 }
 
 
@@ -103,5 +97,9 @@ generate.onclick = function(){
 
     display.textContent = ""
 
-    generator(length, includeNumbers.checked, includeSimbols.checked, includeUppercase.checked, includeLowercase.checked);
+    display.textContent = generator(length,
+                                    includeNumbers.checked,
+                                    includeSimbols.checked,
+                                    includeUppercase.checked,
+                                    includeLowercase.checked);
 }
