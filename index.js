@@ -1,5 +1,3 @@
-
-
 const length = document.getElementById("input");
 const display = document.getElementById("display");
 const generate = document.getElementById("generate");
@@ -10,9 +8,6 @@ const includeLowercase = document.getElementById("includeLowercase");
 const numberRate = document.getElementById("numberRate");
 const registerRate = document.getElementById("registerRate");
 
-
-
-
 function generator(length, isNumber, isSymbol, isUpper, isLower){
     const latters = "qwertyuiopasdfghjklzxcvbnm";
     const upperLatters = latters.toUpperCase();
@@ -21,12 +16,12 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
     let password = "";
     let temp = ""
 
-
-
-
-
-    allowedChars += isNumber ? numbers: "";
+    function pickaAChar(){
+        let random = Math.round((Math.random() * Number(allowedChars.length - 1 ))) ;
+        password += allowedChars[random];
+    }
     
+    allowedChars += isNumber ? numbers: "";
 
     if (isSymbol && isLower) {
         allowedChars += latters;
@@ -35,22 +30,15 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
     if (isSymbol && isUpper) {
         allowedChars += upperLatters;
     }
-
     if (isSymbol)
         if (!isLower && !isUpper){
             return "Не выбран регистр символов"
         }
-    temp = allowedChars;
 
     if (allowedChars == "")
         return "Выбери хоть что-то ..."
-
-    function pickaAChar(){
-        let random = Math.round((Math.random() * Number(allowedChars.length - 1 ))) ;
-        password += allowedChars[random];
-    }
-    
-
+        
+    temp = allowedChars;
     
     for (let i = 0; i < length.value; i++){
         let a = Math.round((Math.random() * 100)-1)
@@ -76,23 +64,13 @@ function generator(length, isNumber, isSymbol, isUpper, isLower){
                 allowedChars = allowedChars.replace(upperLatters, "")
             }
         }
-
-        
+      
         //выбираем символ из оставшихся 
         pickaAChar();
     }
     
-
-
-
-
     return password;
 }
-
-
-
-
-
 generate.onclick = function(){
 
     display.textContent = ""
